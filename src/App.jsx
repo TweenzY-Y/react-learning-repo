@@ -37,6 +37,22 @@ function App() {
           <li>Most of attributes are camelCase</li>
         </ol>
       </Lesson>
+      <Lesson header="JavaScript in JSX with curly braces">
+        <p>
+          I can use JavaScript inside JSX by using curly braces. That let's me to dynamically specify a JSX values based
+          on JavaScript variables.
+        </p>
+        <p>Using curly braces can be done in two ways:</p>
+        <ol>
+          <li>As text: directly in JSX tag</li>
+          <li>As JSX tag's attribute</li>
+        </ol>
+      </Lesson>
+      <Lesson header="Passing props to a component">
+        <p>If I pass all props from parent deep into tree I should be using spread syntax</p>
+        <img src="./ss1.png"></img>
+        <p>Props are immutable.</p>
+      </Lesson>
     </>
   );
 }
