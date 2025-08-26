@@ -53,6 +53,21 @@ function App() {
         <img src="./ss1.png"></img>
         <p>Props are immutable.</p>
       </Lesson>
+      <Lesson header="Conditional rendering"></Lesson>
+      <Lesson header="Rendering lists">
+        <p>While I use map function to render a component, JSX directly inside map function needs key attribute.</p>
+        <p>
+          Keys tell React which array item is assigned to given component. It's important when when array items can move
+          due to sorting, filtering etc.
+        </p>
+        <p>Keys shouldn't be generated on fly. Ideally it's should be included in data (like id)</p>
+        <h3>Rules of keys:</h3>
+        <ol>
+          <li>Each key among siblings must be unique!</li>
+          <li>Key cannot change! Keys cannot be generated during rendering!</li>
+        </ol>
+        <p>If I don't provide any key. React will use item index instead. (That's what most of devs do)</p>
+      </Lesson>
     </>
   );
 }
