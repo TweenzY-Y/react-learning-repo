@@ -68,6 +68,28 @@ function App() {
         </ol>
         <p>If I don't provide any key. React will use item index instead. (That's what most of devs do)</p>
       </Lesson>
+      <Lesson header={"Keeping components pure"}>
+        <h3>Rules of pure functions:</h3>
+        <ul>
+          <li>It doesnt change any object or variable that existed before it was called</li>
+          <li>For the same input it returns the same output</li>
+        </ul>
+        <p>React is designed that way it assumes that every component is a pure function.</p>
+        <p>
+          That's why StrictMode is used in development process. One of thing it does is to double render components to
+          check if functions are pure.
+        </p>
+      </Lesson>
+      <Lesson header={"Your UI as a tree"}>
+        <p>There are two types of trees</p>
+        <ol>
+          <li>Rendering tree</li>
+          <li>Dependency tree</li>
+        </ol>
+        <h3>Rendering tree shows render process as a tree.</h3>
+        <h3>Dependency tree shows how components imports other components.</h3>
+        <p>Understanding trees might be helpful while debugging or working on app performance.</p>
+      </Lesson>
     </>
   );
 }
