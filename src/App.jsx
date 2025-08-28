@@ -90,6 +90,22 @@ function App() {
         <h3>Dependency tree shows how components imports other components.</h3>
         <p>Understanding trees might be helpful while debugging or working on app performance.</p>
       </Lesson>
+      <Lesson header="Responding to events">
+        <p>
+          To write a event handler function. It's usually written inside a component, and it's name starts with 'handle'
+          and it's followed by name of an event.
+        </p>
+        <p>Because event handlers are written in components, they get access to props.</p>
+        <p>I can pass event handlers from parent component to the child components.</p>
+        <p>
+          When I make my own component, I can name event handler prop whatever I want. By convention it should start
+          from 'on'.
+        </p>
+        <p>
+          There is something like event propagation. Event handler then catch all events up to the tree. It can be
+          prevented by e.stopPropagation()
+        </p>
+      </Lesson>
     </>
   );
 }
