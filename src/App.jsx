@@ -106,6 +106,32 @@ function App() {
           prevented by e.stopPropagation()
         </p>
       </Lesson>
+      <Lesson header="State: A Component's Memory">
+        <p>useState returns two types of values</p>
+        <ol>
+          <li>State variable - which ratain the data between renders</li>
+          <li>
+            State setter function - which allows us to change state value. Calling it also re-renders a component.
+          </li>
+        </ol>
+        <p>
+          useState is the first hook. Hooks are available only while React is rendering. Hooks have to be called at the
+          top level of our component or inside our own hooks.
+        </p>
+        <p>
+          React's useState knows which state to return because hooks rely on call order on every render. That's why it's
+          important to stick to the rule of calling states only on the top level of a component. Because of that hooks
+          always be called in the same order.
+        </p>
+        <p>
+          React internally holds an array of state pairs (state variables and state setter functions) and it iterates
+          over it while rendering.
+        </p>
+        <p>
+          States are local to component instance. So If I render a component twice, each of component will have separate
+          state and it will work independently
+        </p>
+      </Lesson>
     </>
   );
 }
