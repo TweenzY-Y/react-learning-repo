@@ -132,6 +132,35 @@ function App() {
           state and it will work independently
         </p>
       </Lesson>
+      <Lesson header="Render and Commit">
+        <p>React's serving UI system can be explained in 3 steps</p>
+        <ol>
+          <li>Trigger</li>
+          <li>Render</li>
+          <li>Commit</li>
+        </ol>
+        <p>
+          There are 2 reasons for component to trigger a render: initial render (when component mounts on init) and when
+          state of component or it's ancestor state change.
+        </p>
+        <p>Initial render is done by calling createRoot with target DOM node and then calling render on this root.</p>
+        <p>
+          During the initial render React creates DOM nodes for all html tags inside components then after each
+          re-render trigger React checks for properties that have changed for each node since last render.
+        </p>
+        <p>
+          Default behavior of rendering all components nested inside updated component is not optimal in cases where
+          tree of updated component is huge. Then there are ways to optimize it. But we shouldn't do it without a
+          reason.
+        </p>
+        <p>
+          During a commit phase, React will change DOM elements that have been changed since last render. It will try to
+          do with with at least operations it can be done. It wont update elements in component that didnt change.
+        </p>
+      </Lesson>
+      <Lesson header="State as a Snapshot">
+        <p>Rendering creates a snapshot of UI in given time.</p>
+      </Lesson>
     </>
   );
 }
